@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background-color: #008d81;
+}
+
+::selection {
+  background-color: #008d81;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+}
+
+.card__box_items {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background-color: black;
+  padding: 40px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px;
+  overflow: hidden;
+}
+.card__box_items::before {
+  content: "";
+  position: absolute;
+  left: 37%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 250px;
+  height: 225%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#93fffa), to(#95ff95));
+  background: linear-gradient(#93fffa, #95ff95);
+  -webkit-animation: anime 7s linear infinite;
+          animation: anime 7s linear infinite;
+}
+@-webkit-keyframes anime {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes anime {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.card__box_items::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  inset: 4px;
+  border-radius: 20px;
+}
+.card__box_items .image__item {
+  max-width: 280px;
+  text-align: center;
+  z-index: 50;
+}
+.card__box_items .image__item img {
+  width: 100%;
+  border-radius: 50%;
+}
+.card__box_items .info__item {
+  max-width: 370px;
+  margin: 0 auto;
+  z-index: 50;
+}
+.card__box_items .info__item .name {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  color: #e6e6e6;
+}
+.card__box_items .info__item .profession {
+  font-size: 17px;
+  color: rgba(230, 230, 230, 0.877);
+  font-weight: 300;
+}
+.card__box_items .info__item .about__text {
+  margin-top: 30px;
+  font-size: 17px;
+  color: #e6e6e6;
+  line-height: 27px;
+  letter-spacing: 1px;
+}
+.card__box_items .info__item .mail {
+  margin-top: 20px;
+  text-align: start;
+  color: white;
+  font-size: 17px;
+}
+.card__box_items .info__item .mail .mail_icon {
+  color: white;
+  margin-right: 5px;
+  font-size: 17px;
+}
+.card__box_items .info__item .social__pages {
+  margin-top: 20px;
+}
+.card__box_items .info__item .social__pages .social_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card__box_items .info__item .social__pages .social_icons a {
+  font-size: 22px;
+  margin: 30px 5px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.card__box_items .info__item .social__pages .social_icons a:hover {
+  background-color: white;
+  color: #000000;
+}
+
+/* ================== Responsive ==================== */
+@media screen and (max-width: 850px) {
+  .card__box_items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__box_items::before {
+    top: -50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#339994), color-stop(#e2e2e2), to(#0062b3));
+    background: linear-gradient(#339994, #e2e2e2, #0062b3);
+  }
+  .card__box_items .image__item {
+    max-width: 170px;
+  }
+  .card__box_items .info__item {
+    margin-top: 30px;
+  }
+  .card__box_items .info__item .social__pages {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card__box_items::before {
+    width: 150px;
+  }
+  .card__box_items .info__item .name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .card__box_items .info__item .about_title {
+    font-size: 25px;
+  }
+  .card__box_items .info__item .about__text {
+    font-size: 15px;
+  }
+  .card__box_items .info__item .mail {
+    font-size: 14px;
+  }
+  .card__box_items .info__item .social__pages {
+    margin-top: 30px;
+  }
+  .card__box_items .image__item .profession {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .card__box_items {
+    padding: 10px;
+  }
+}
