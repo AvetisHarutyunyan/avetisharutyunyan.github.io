@@ -40,7 +40,6 @@ body {
   position: relative;
   max-width: 900px;
   width: 100%;
-  background-color: black;
   padding: 40px;
   border-radius: 20px;
   display: -webkit-box;
@@ -93,7 +92,7 @@ body {
 .card__box_items::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: #030303;
   inset: 4px;
   border-radius: 20px;
 }
@@ -117,7 +116,7 @@ body {
   line-height: 30px;
   margin-top: 15px;
   letter-spacing: 1px;
-  color: #e6e6e6;
+  color: lightgray;
 }
 .card__box_items .info__item .profession {
   font-size: 17px;
@@ -134,11 +133,11 @@ body {
 .card__box_items .info__item .mail {
   margin-top: 20px;
   text-align: start;
-  color: white;
+  color: lightgray;
   font-size: 17px;
 }
 .card__box_items .info__item .mail .mail_icon {
-  color: white;
+  color: lightgray;
   margin-right: 5px;
   font-size: 17px;
 }
@@ -153,7 +152,7 @@ body {
 .card__box_items .info__item .social__pages .social_icons a {
   font-size: 22px;
   margin: 30px 5px;
-  color: white;
+  color: lightgray;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -170,7 +169,7 @@ body {
   transition: 0.2s ease;
 }
 .card__box_items .info__item .social__pages .social_icons a:hover {
-  background-color: white;
+  background-color: lightgray;
   color: #000000;
 }
 
