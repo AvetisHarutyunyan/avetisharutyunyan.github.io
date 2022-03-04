@@ -207,4 +207,18 @@ body {
     .card__box_items {
         padding: 10px;
     }
+
+    .card__box_items{
+        .info__item{
+            .social__pages{
+                .social_icons{
+                    a{
+                        font-size: 18px;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
 }
