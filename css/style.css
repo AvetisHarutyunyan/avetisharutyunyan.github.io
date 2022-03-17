@@ -32,8 +32,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("../images/background-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
-  background-color: #0f0f0f;
 }
 
 .card__box_items {
@@ -92,7 +95,7 @@ body {
 .card__box_items::after {
   content: "";
   position: absolute;
-  background-color: #030303;
+  background-color: #03080d;
   inset: 4px;
   border-radius: 20px;
 }

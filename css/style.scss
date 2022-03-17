@@ -23,8 +23,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/background-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
-    background-color: rgb(15, 15, 15);
 }
 
 .card__box_items {
@@ -62,7 +65,7 @@ body {
     &::after {
         content: "";
         position: absolute;
-        background-color: rgb(3, 3, 3);
+        background-color: rgb(3, 8, 13);
         inset: 4px;
         border-radius: 20px;
     }
