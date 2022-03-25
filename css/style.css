@@ -9,11 +9,13 @@
 }
 
 ::-moz-selection {
-  background-color: #008d81;
+  background-color: #00a194;
+  color: white;
 }
 
 ::selection {
-  background-color: #008d81;
+  background-color: #00a194;
+  color: white;
 }
 
 .container {
@@ -66,7 +68,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 250px;
-  height: 225%;
+  height: 250%;
   background: -webkit-gradient(linear, left top, left bottom, from(#93fffa), to(#95ff95));
   background: linear-gradient(#93fffa, #95ff95);
   -webkit-animation: anime 7s linear infinite;
@@ -160,6 +162,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,8 +176,7 @@ body {
   transition: 0.2s ease;
 }
 .card__box_items .info__item .social__pages .social_icons a:hover {
-  background-color: lightgray;
-  color: #000000;
+  border: 1px solid white;
 }
 
 /* ================== Responsive ==================== */
@@ -186,9 +188,13 @@ body {
             flex-direction: column;
   }
   .card__box_items::before {
-    top: -50%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#339994), color-stop(#e2e2e2), to(#0062b3));
-    background: linear-gradient(#339994, #e2e2e2, #0062b3);
+    position: absolute;
+    top: -73%;
+    left: 30%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#26fff4), to(#005091));
+    background: linear-gradient(#26fff4, #005091);
   }
   .card__box_items .image__item {
     max-width: 170px;
