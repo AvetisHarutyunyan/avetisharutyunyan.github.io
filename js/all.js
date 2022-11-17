@@ -1,0 +1,2 @@
+"use strict";window.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".userImage"),t=document.querySelector(".card__box_items"),s=document.body;e.addEventListener("click",(function(){e.classList.contains("userImgZoom")||(e.classList.add("userImgZoom"),t.classList.add("cardImgZoom"),s.classList.add("dark"),e.title="",t.title=""),document.addEventListener("click",(function(o){o.target!==e&&(e.classList.remove("userImgZoom"),t.classList.remove("cardImgZoom"),s.classList.remove("dark"))}))}))}));
+//# sourceMappingURL=all.js.map
