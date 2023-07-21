@@ -9,7 +9,8 @@
 }
 
 ::selection {
-    background-color: rgb(0, 59, 61);
+    background-color: rgb(44, 171, 255);
+    color: #000;
 }
 
 body {
@@ -27,12 +28,24 @@ body {
 }
 
 .card {
-    text-align: center;
-    padding: 0 10px;
+    display: flex;
+    gap: 0 20px;
+    background-color: rgba(0, 0, 0, 0.555);
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 
     .myImg {
-        max-width: 230px;
-        margin: 10px auto;
+        max-width: 240px;
+        border-right: 1px solid #c9c9c92c;
+        padding: 10px;
+
+        @media screen and (max-width: 600px) {
+            border-right: none;
+            max-width: 280px;
+            margin: 0 auto;
+        }
 
         img {
             width: 100%;
@@ -42,86 +55,127 @@ body {
 
             @keyframes colorAnim {
                 0% {
-                    border: 3px solid rgba(0, 128, 0, 0);
+                    border: 1.5px solid rgba(0, 128, 0, 0);
                 }
-                
+
                 100% {
-                    border: 3px solid rgb(44, 171, 255);
+                    border: 1.5px solid rgb(44, 171, 255);
                 }
             }
         }
-    }
 
-    .name {
-        font-size: min(40px, max(10vw));
-        letter-spacing: 3px;
-        text-shadow: 2px 2px 3px rgb(0, 0, 0);
-    }
 
-    .prof {
-        margin-top: 10px;
-        letter-spacing: 1.5px;
-        font-size: 16px;
-        text-shadow: 2px 2px 3px rgb(0, 0, 0);
-        font-family: "m-medium";
-    }
-
-    .myInfo_text {
-        max-width: 400px;
-        margin: 25px auto auto auto;
-        padding-top: 25px;
-        border-top: 1px solid #686868be;
-        font-size: 17px;
-        text-shadow: 2px 2px 3px rgb(0, 0, 0);
-        line-height: 26px;
-        letter-spacing: .6px;
-    }
-
-    .myMail {
-        display: flex;
-        justify-content: center;
-        align-items: color;
-        text-shadow: 2px 2px 3px rgb(0, 0, 0);
-        gap: 0 10px;
-        margin-top: 30px;
-
-        .mail_icon {
-
-            img {
-                width: 20px;
-            }
-        }
-
-        .mail {
-            letter-spacing: 1px;
-            font-size: min(17px, max(4vw));
-        }
-    }
-
-    .social__pages {
-        display: flex;
-        justify-content: center;
-        max-width: 240px;
-        margin: 30px auto auto auto;
 
         .social_icons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px 50px;
+            gap: 5px 15px;
+            max-width: 150px;
+            margin: 40px auto;
+
+            @media screen and (max-width: 600px) {
+                flex-wrap: nowrap;
+                max-width: 270px;
+                align-items: center;
+            }
 
             a {
-                max-width: 35px;
-                transition: .2s ease;
+                max-width: 40px;
+                transition: .8s ease;
 
                 img {
                     width: 100%;
                 }
+            }
+        }
 
-                &:nth-child(1) {
-                    max-width: 30px;
+        .avInfo_web {
+            max-width: 130px;
+            margin: 0 auto;
+
+            a {
+                &:hover {
+                    path {
+                        fill: rgb(44, 171, 255);
+                        transition: .2s ease;
+                    }
                 }
             }
+        }
+    }
+
+    .my__info_container {
+        padding: 20px;
+
+        .myName {
+            .name {
+                font-size: min(40px, max(10vw));
+                letter-spacing: 3px;
+                text-shadow: 2px 2px 3px rgb(0, 0, 0);
+            }
+
+            .prof {
+                margin-top: 10px;
+                letter-spacing: 1.5px;
+                font-size: 16px;
+                text-shadow: 2px 2px 3px rgb(0, 0, 0);
+                font-family: "m-medium";
+            }
+        }
+
+        .myInfo_title {
+            margin-top: 30px;
+            font-size: 20px;
+
+            &:nth-child(2) {
+                margin-top: 55px;
+            }
+        }
+
+        .myInfo_text {
+            max-width: 400px;
+            padding-top: 25px;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px rgb(0, 0, 0);
+            line-height: 26px;
+            letter-spacing: .6px;
+        }
+
+        .myMail {
+            display: flex;
+            align-items: center;
+            text-shadow: 2px 2px 3px rgb(0, 0, 0);
+            gap: 0 10px;
+            margin-top: 30px;
+
+            .mail_icon {
+
+                img {
+                    width: 25px;
+
+                    @media screen and (max-width: 420px) {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .mail {
+                letter-spacing: 1px;
+                font-size: min(17px, max(4vw));
+
+                @media screen and (max-width: 420px) {
+                    font-size: min(15px, max(4vw));
+                }
+            }
+        }
+
+        .myPhone {
+            display: flex;
+            align-items: center;
+            text-shadow: 2px 2px 3px rgb(0, 0, 0);
+            gap: 0 10px;
+            margin-top: 10px;
         }
     }
 }
